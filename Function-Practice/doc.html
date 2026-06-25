@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id ="demo1"></p>
+    <p id="demo2"></p>
+    <p id = "demo3"></p>
+    
+    <script>
+
+
+
+
+// arrays //
+const fruits = ["grapes", "lemons" , "Mangoes"];
+fruits.push("orange"); // adds a new element to the end of the array    
+let mylist=fruits.length; // finds the number of elements in the array
+console.log(mylist); // finds the number of elements in the array
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+ let x = fruits[0]; // accesses the first element of the array  
+
+ 
+
+document.getElementById("demo").innerHTML = text + "<br>" + x ; // displays the array and the first element of the array 
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+
+  // associative (numbered) arrays //
+
+  /*const cars = [];
+  cars[0] = "Saab";
+  cars[1] = "Volvo";
+  cars[2] = "BMW"; // adds a new element to the end of the array
+*/
+} 
+ // let school = array("St. Joseph's", "St. Mary's", "St. Peter's"); // this is a constructor function that creates an array object
+
+ let type = Array.isArray(fruits); // checks if the variable is an array
+ fruits.length = 3; // changes the length of the array to 3, keeping all elements
+ let mylist2 = fruits.toString(); // converts the array to a string
+document.getElementById("demo1").innerHTML = type + "<br>" + mylist2; 
+
+ let fruits2 = fruits.at(2) ; // accesses the last element of the array using the at() method same as fruits[2]
+document.getElementById("demo2").innerHTML = fruits2; // displays the 3rd element of the array
+
+
+
+const houses = ["Bungalow", "Mansion", "Apartment"];
+houses.pop(); // removes the last element of the array
+houses.shift(); // removes the first element of the array
+houses.unshift("Cottage"); // adds a new element to the beginning of the array
+//document.getElementById("demo3").innerHTML = houses; // displays the remaining elements of the array
+
+
+const colors = ["red", "green", "blue"];
+const shades = ["light", "dark"];
+const allColors = colors.concat(shades); // combines two arrays into one
+document.getElementById("demo3").innerHTML = allColors; // displays the combined array
+
+
+</script>
+</body>
+
+</html>
