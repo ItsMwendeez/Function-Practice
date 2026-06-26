@@ -9,7 +9,7 @@
     
     <script>
 
-
+/*
 
 
 // arrays //
@@ -36,7 +36,7 @@ function myFunction(value) {
   cars[0] = "Saab";
   cars[1] = "Volvo";
   cars[2] = "BMW"; // adds a new element to the end of the array
-*/
+
 } 
  // let school = array("St. Joseph's", "St. Mary's", "St. Peter's"); // this is a constructor function that creates an array object
 
@@ -62,7 +62,25 @@ const shades = ["light", "dark"];
 const allColors = colors.concat(shades); // combines two arrays into one
 document.getElementById("demo3").innerHTML = allColors; // displays the combined array
 
+*/
+ 
 
+//sets
+
+const letters = new Set(["a", "b", "c"]);
+letters.add("d"); // adds a new element to the set
+ let text = "";
+ for (const x of letters) { //List all elements of the set
+  text += x;
+ } 
+
+ answer = letters.has("a"); // checks if the set contains the element "a"
+//document.getElementById("demo").innerHTML = text; // displays the elements of the set
+//document.getElementById("demo").innerHTML = typeof letters; // returns "object" because sets are objects
+document.getElementById("demo").innerHTML = answer; // returns true because the set contains the element "a"
+
+
+document.getElementById("demo1").innerHTML = letters.size; // returns the number of elements in the set
 </script>
 </body>
 
